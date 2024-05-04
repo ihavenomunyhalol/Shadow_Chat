@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Chat</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="content">
+        <h1>Shadow Chat</h1>
+
+        <!-- Form for sending posts -->
+        <form id="postForm">
+            <textarea id="postContent" rows="4" cols="50" placeholder="Write your post..." required></textarea><br>
+            <button type="submit">Post</button>
+        </form>
+
+        <!-- Clear storage button with password prompt -->
+        <button id="clearStorage">Clear Storage</button>
+
+        <!-- Admin button with password protection -->
+        <button id="adminButton">Admin</button>
+
+        <!-- Displaying posts -->
+        <div id="postContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
