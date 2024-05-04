@@ -1,0 +1,140 @@
+body {
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.7) 100%);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1s ease forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes expandBackground {
+    0% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 150% 150%;
+    }
+}
+
+#content {
+    width: 80%;
+    max-width: 600px;
+    text-align: center; /* Center align content */
+    opacity: 0; /* Initially hidden */
+    animation: fadeInContent 1s ease forwards; /* Fade-in animation for content */
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#postContainer {
+    max-height: 60vh; /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.post {
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent; /* Add border */
+    transition: border-color 0.3s ease; /* Add transition for glow effect */
+}
+
+.post:hover {
+    border-color: white; /* Glow effect on hover */
+}
+
+.reply {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.thumbs {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+#clearStorage {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#clearStorage:hover {
+    border-color: white;
+    box-shadow: 0 0 10px white;
+}
+
+#adminButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#adminButton:hover {
+    border-color: white;
+    box-shadow: 0 0 10px white;
+}
+
+.sparkle {
+    position: absolute;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    animation: sparkleAnim 1s linear;
+}
+
+@keyframes sparkleAnim {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
